@@ -8,7 +8,7 @@ timezone: Europe/Paris
 permalink: /blog/:title/
 tally_form: gDJLal
 contact_email: contact@expert-eaa.fr
-linkedin_url: ""
+linkedin_url: "https://www.linkedin.com/company/expert-eaa/"
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
