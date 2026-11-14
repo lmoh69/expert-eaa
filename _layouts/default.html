@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% seo %}
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a3a8c'/%3E%3Ctext x='32' y='42' font-family='Arial' font-size='26' font-weight='700' fill='white' text-anchor='middle'%3EEA%3C/text%3E%3C/svg%3E">
+{% feed_meta %}
+</head>
+<body>
+<a class="lien-evitement" href="#contenu">Aller au contenu</a>
+<header class="bandeau">
+  <div class="conteneur bandeau-int">
+    <a class="logo" href="/"><span class="pastille" aria-hidden="true">EA</span>Expert EAA</a>
+    <nav aria-label="Navigation principale">
+      <ul>
+        <li><a href="/obligations-eaa/"{% if page.url == '/obligations-eaa/' %} aria-current="page"{% endif %}>Obligations EAA</a></li>
+        <li><a href="/audit-rgaa/"{% if page.url == '/audit-rgaa/' %} aria-current="page"{% endif %}>Audit RGAA</a></li>
+        <li><a href="/blog/"{% if page.url contains '/blog/' %} aria-current="page"{% endif %}>Blog</a></li>
+        <li><a class="nav-cta" href="/#diagnostic">Diagnostic gratuit</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="contenu">
+{{ content }}
+</main>
+
+<footer class="pied">
+  <div class="conteneur pied-int">
+    <div>
+      <p class="pied-titre">Expert EAA</p>
+      <p>Diagnostic et audit d'accessibilité numérique selon le RGAA. Un service de LP SERVICE, Lyon.</p>
+      <p><a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a></p>
+    </div>
+    <ul class="pied-liens">
+      <li><a href="/#diagnostic">Diagnostic gratuit</a></li>
+      <li><a href="/obligations-eaa/">Obligations EAA</a></li>
+      <li><a href="/audit-rgaa/">Audit RGAA</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      {% if site.linkedin_url != "" %}<li><a href="{{ site.linkedin_url }}">Expert EAA sur LinkedIn</a></li>{% endif %}
+      <li><a href="/declaration-accessibilite/">Accessibilité : conformité partielle</a></li>
+      <li><a href="/mentions-legales/">Mentions légales</a></li>
+    </ul>
+  </div>
+</footer>
+{% if page.tally %}
+<script>
+(function(){var d=document,w="https://tally.so/widgets/embed.js";function v(){if(typeof Tally!=="undefined"){Tally.loadEmbeds();}else{d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e){e.src=e.dataset.tallySrc;});}}if(typeof Tally!=="undefined"){v();}else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w;s.onload=v;s.onerror=v;d.body.appendChild(s);}})();
+</script>
+{% endif %}
+</body>
+</html>

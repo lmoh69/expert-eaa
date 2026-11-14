@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<article class="article">
+  <div class="article-tete">
+    <div class="conteneur etroit">
+      <p class="fil"><a href="/blog/">Blog</a> <span aria-hidden="true">›</span> <span>Article</span></p>
+      <h1>{{ page.title }}</h1>
+      <p class="article-meta">Publié le <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%d/%m/%Y' }}</time> · Lecture : {{ content | number_of_words | divided_by: 200 | plus: 1 }} min</p>
+    </div>
+  </div>
+  <div class="conteneur etroit contenu-article">
+    {{ content }}
+    <aside class="encart-cta" aria-labelledby="cta-titre">
+      <h2 id="cta-titre">Votre site est-il concerné ?</h2>
+      <p>Recevez gratuitement un diagnostic de votre page d'accueil : les problèmes d'accessibilité les plus visibles, expliqués simplement, sous 48 h ouvrées.</p>
+      <a class="bouton" href="/#diagnostic">Demander mon diagnostic gratuit</a>
+    </aside>
+    <p class="avertissement">Cet article est fourni à titre d'information générale et ne constitue pas un conseil juridique. Les textes applicables peuvent évoluer : vérifiez la réglementation en vigueur pour votre situation.</p>
+    {% assign autres = site.posts | where_exp: "p", "p.url != page.url" %}
+    {% if autres.size > 0 %}
+    <section class="a-lire" aria-labelledby="a-lire-titre">
+      <h2 id="a-lire-titre">À lire aussi</h2>
+      <ul>
+        {% for p in autres limit:3 %}<li><a href="{{ p.url }}">{{ p.title }}</a></li>{% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+  </div>
+</article>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","headline":{{ page.title | jsonify }},"description":{{ page.description | jsonify }},"datePublished":"{{ page.date | date_to_xmlschema }}","inLanguage":"fr-FR","author":{"@type":"Organization","name":"Expert EAA"},"publisher":{"@type":"Organization","name":"Expert EAA","url":"https://expert-eaa.fr"},"mainEntityOfPage":"{{ page.url | absolute_url }}"}
+</script>

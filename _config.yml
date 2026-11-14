@@ -1,0 +1,29 @@
+title: Expert EAA
+description: Diagnostic gratuit et audit d'accessibilité numérique (RGAA, European Accessibility Act) pour les sites e-commerce et les entreprises.
+url: https://expert-eaa.fr
+baseurl: ""
+lang: fr_FR
+locale: fr_FR
+timezone: Europe/Paris
+permalink: /blog/:title/
+tally_form: gDJLal
+contact_email: contact@expert-eaa.fr
+linkedin_url: ""
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+feed:
+  path: blog/feed.xml
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+    values:
+      layout: default
+exclude:
+  - README.md
