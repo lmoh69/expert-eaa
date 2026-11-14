@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Expert EAA – Diagnostic gratuit d'accessibilité numérique (RGAA)</title>
+<meta name="description" content="Votre site est-il conforme à l'accessibilité numérique (European Accessibility Act, RGAA) ? Demandez votre diagnostic gratuit de page d'accueil, puis un audit complet réalisé par un auditeur partenaire.">
+<link rel="canonical" href="https://expert-eaa.fr/">
+<meta property="og:title" content="Expert EAA – Diagnostic gratuit d'accessibilité numérique">
+<meta property="og:description" content="Diagnostic gratuit de votre page d'accueil selon le RGAA, puis audit complet et suivi.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://expert-eaa.fr/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a3a8c'/%3E%3Ctext x='32' y='42' font-family='Arial' font-size='26' font-weight='700' fill='white' text-anchor='middle'%3EEA%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --bleu:#0a3a8c;
+  --bleu-fonce:#062a66;
+  --bleu-clair:#e8effb;
+  --texte:#1a2233;
+  --gris:#4a5568;
+  --fond:#ffffff;
+  --accent:#ffcc33;
+  --bord:#d5deee;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--texte);background:var(--fond);line-height:1.6;font-size:1.0625rem}
+a{color:var(--bleu)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.lien-evitement{position:absolute;left:-9999px;top:0;background:var(--accent);color:#000;padding:.75rem 1rem;z-index:10;font-weight:700}
+.lien-evitement:focus{left:1rem;top:1rem}
+.conteneur{max-width:1080px;margin:0 auto;padding:0 1.25rem}
+header.bandeau{background:var(--bleu-fonce)}
+header.bandeau .conteneur{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-top:1rem;padding-bottom:1rem}
+.logo{color:#fff;text-decoration:none;font-weight:800;font-size:1.25rem;letter-spacing:.02em;display:flex;align-items:center;gap:.6rem}
+.logo span.pastille{display:inline-grid;place-items:center;width:2.2rem;height:2.2rem;border-radius:.6rem;background:#fff;color:var(--bleu-fonce);font-size:.95rem}
+nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1.25rem;flex-wrap:wrap}
+nav a{color:#fff;text-decoration:none;font-weight:600}
+nav a:hover{text-decoration:underline}
+.hero{background:linear-gradient(160deg,var(--bleu) 0%,var(--bleu-fonce) 100%);color:#fff;padding:4.5rem 0 5rem}
+.hero h1{font-size:clamp(1.9rem,4.5vw,3rem);line-height:1.15;margin:0 0 1.25rem;max-width:22ch}
+.hero p.chapo{font-size:1.2rem;max-width:56ch;margin:0 0 2rem;color:#eef3fc}
+.bouton{display:inline-block;background:var(--accent);color:#111;font-weight:800;text-decoration:none;padding:1rem 1.6rem;border-radius:.6rem;font-size:1.1rem}
+.bouton:hover{background:#ffd95c}
+.hero .rassurance{margin-top:1.25rem;font-size:.95rem;color:#dbe5f7}
+section{padding:4rem 0}
+section.gris{background:var(--bleu-clair)}
+h2{font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.2;margin:0 0 1rem;color:var(--bleu-fonce)}
+.intro{max-width:65ch;color:var(--gris);margin:0 0 2.25rem}
+.grille{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.carte{background:#fff;border:1px solid var(--bord);border-radius:.9rem;padding:1.5rem}
+.carte h3{margin:0 0 .5rem;font-size:1.15rem;color:var(--bleu-fonce)}
+.carte p{margin:0;color:var(--gris)}
+ol.etapes{list-style:none;counter-reset:etape;padding:0;margin:0;display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+ol.etapes li{counter-increment:etape;background:#fff;border:1px solid var(--bord);border-radius:.9rem;padding:1.5rem}
+ol.etapes li::before{content:counter(etape);display:inline-grid;place-items:center;width:2.4rem;height:2.4rem;border-radius:50%;background:var(--bleu);color:#fff;font-weight:800;margin-bottom:.75rem}
+ol.etapes h3{margin:0 0 .4rem;font-size:1.1rem;color:var(--bleu-fonce)}
+ol.etapes p{margin:0;color:var(--gris)}
+.badge{display:inline-block;font-size:.8rem;font-weight:700;background:var(--bleu-clair);color:var(--bleu-fonce);padding:.15rem .55rem;border-radius:999px;margin-left:.35rem;vertical-align:middle}
+.alerte{border-left:5px solid var(--bleu);background:#fff;padding:1.25rem 1.5rem;border-radius:.5rem;margin-top:2rem;max-width:70ch}
+.alerte p{margin:0}
+.formulaire{background:#fff;border:1px solid var(--bord);border-radius:1rem;padding:1.5rem;box-shadow:0 10px 30px rgba(6,42,102,.08)}
+.formulaire iframe{width:100%;border:0;min-height:620px}
+.secours{font-size:.95rem;color:var(--gris);margin-top:1rem}
+details{background:#fff;border:1px solid var(--bord);border-radius:.75rem;padding:1rem 1.25rem;margin-bottom:.75rem}
+summary{cursor:pointer;font-weight:700;color:var(--bleu-fonce)}
+details p{margin:.75rem 0 0;color:var(--gris)}
+footer{background:var(--bleu-fonce);color:#dbe5f7;padding:2.5rem 0;font-size:.95rem}
+footer a{color:#fff}
+footer .conteneur{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between}
+@media (max-width:640px){
+  nav{display:none}
+  .hero{padding:3rem 0 3.5rem}
+  section{padding:3rem 0}
+  .formulaire{padding:.75rem}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="lien-evitement" href="#contenu">Aller au contenu</a>
+
+<header class="bandeau">
+  <div class="conteneur">
+    <a class="logo" href="/" aria-label="Expert EAA, accueil"><span class="pastille" aria-hidden="true">EA</span>Expert EAA</a>
+    <nav aria-label="Navigation principale">
+      <ul>
+        <li><a href="#concernes">Qui est concerné ?</a></li>
+        <li><a href="#methode">Notre méthode</a></li>
+        <li><a href="#faq">Questions</a></li>
+        <li><a href="#diagnostic">Diagnostic gratuit</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="contenu">
+  <div class="hero">
+    <div class="conteneur">
+      <h1>Votre site internet est-il accessible à tous, comme l'exige la loi ?</h1>
+      <p class="chapo">Depuis le 28 juin 2025, l'European Accessibility Act impose l'accessibilité numérique aux sites e-commerce et aux services en ligne. Nous vérifions gratuitement votre page d'accueil selon le référentiel officiel RGAA et vous disons quoi corriger.</p>
+      <a class="bouton" href="#diagnostic">Demander mon diagnostic gratuit</a>
+      <p class="rassurance">Gratuit et sans engagement · Réponse sous 48 h ouvrées · Rapport clair, sans jargon</p>
+    </div>
+  </div>
+
+  <section id="concernes">
+    <div class="conteneur">
+      <h2>Qui est concerné ?</h2>
+      <p class="intro">L'obligation ne concerne plus seulement les administrations. Si vous vendez ou proposez un service en ligne, vous êtes probablement concerné.</p>
+      <div class="grille">
+        <div class="carte">
+          <h3>Sites e-commerce</h3>
+          <p>Boutiques en ligne, réservation, prise de commande : tout le parcours d'achat doit être utilisable par tous.</p>
+        </div>
+        <div class="carte">
+          <h3>Banques, transports, télécoms</h3>
+          <p>Services bancaires, billetterie, abonnements téléphoniques et internet sont directement visés.</p>
+        </div>
+        <div class="carte">
+          <h3>Entreprises de plus de 10 salariés</h3>
+          <p>Ou plus de 2 millions d'euros de chiffre d'affaires. Les micro-entreprises qui fournissent des services sont exemptées.</p>
+        </div>
+        <div class="carte">
+          <h3>Collectivités et grandes entreprises</h3>
+          <p>Mairies, organismes publics et grandes entreprises ont déjà des obligations d'accessibilité et de déclaration.</p>
+        </div>
+      </div>
+      <div class="alerte" role="note">
+        <p><strong>Ce que vous risquez :</strong> des sanctions pouvant aller jusqu'à 50 000 € par service non conforme, avec une nouvelle sanction possible si le manquement persiste. Et surtout, des clients qui ne peuvent pas acheter chez vous.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="methode" class="gris">
+    <div class="conteneur">
+      <h2>Notre méthode, en 4 étapes</h2>
+      <p class="intro">Vous commencez gratuitement. Vous ne payez que si vous décidez d'aller plus loin.</p>
+      <ol class="etapes">
+        <li>
+          <h3>Diagnostic flash <span class="badge">Gratuit</span></h3>
+          <p>Nous analysons votre page d'accueil sur les points les plus fréquents : images, contrastes, titres, liens, formulaires, navigation au clavier.</p>
+        </li>
+        <li>
+          <h3>Audit complet RGAA</h3>
+          <p>Un auditeur spécialisé partenaire contrôle les critères du RGAA sur un échantillon de pages représentatif de votre site.</p>
+        </li>
+        <li>
+          <h3>Déclaration d'accessibilité</h3>
+          <p>Vous recevez le rapport d'audit et votre déclaration d'accessibilité, le document à publier sur votre site.</p>
+        </li>
+        <li>
+          <h3>Suivi tous les 6 mois</h3>
+          <p>Votre site évolue : nous le revérifions régulièrement pour que vous restiez conforme dans le temps.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="diagnostic">
+    <div class="conteneur">
+      <h2>Demandez votre diagnostic gratuit</h2>
+      <p class="intro">Indiquez l'adresse de votre site et vos coordonnées. Vous recevez votre bilan par e-mail sous 48 h ouvrées.</p>
+      <div class="formulaire">
+        <iframe data-tally-src="https://tally.so/embed/gDJLal?hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1" loading="lazy" title="Formulaire de demande de diagnostic gratuit"></iframe>
+      </div>
+      <p class="secours">Le formulaire ne s'affiche pas ? <a href="https://tally.so/r/gDJLal">Ouvrir le formulaire dans une nouvelle page</a>.</p>
+    </div>
+  </section>
+
+  <section id="faq" class="gris">
+    <div class="conteneur">
+      <h2>Questions fréquentes</h2>
+      <details>
+        <summary>C'est quoi l'accessibilité numérique ?</summary>
+        <p>C'est le fait qu'un site puisse être utilisé par tout le monde, y compris les personnes aveugles, malvoyantes, sourdes, ou qui ne peuvent pas utiliser une souris. En France, la référence officielle s'appelle le RGAA.</p>
+      </details>
+      <details>
+        <summary>Le diagnostic gratuit remplace-t-il un audit ?</summary>
+        <p>Non. Le diagnostic est indicatif : il repère les problèmes les plus visibles sur votre page d'accueil. Seul un audit complet permet d'établir votre niveau de conformité et votre déclaration d'accessibilité.</p>
+      </details>
+      <details>
+        <summary>Combien de temps prend un audit complet ?</summary>
+        <p>En général deux à trois semaines, selon la taille de votre site. Nous vous donnons un délai précis avec le devis.</p>
+      </details>
+      <details>
+        <summary>Mon site vient d'être refait, suis-je tranquille ?</summary>
+        <p>Pas forcément. Beaucoup de sites récents restent peu accessibles : contrastes insuffisants, images sans description, formulaires mal étiquetés. Le diagnostic gratuit vous le dira.</p>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="conteneur">
+    <p><strong>Expert EAA</strong> – Diagnostic et audit d'accessibilité numérique (RGAA)</p>
+    <p><a href="#diagnostic">Diagnostic gratuit</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var d=document,w="https://tally.so/widgets/embed.js";
+  function v(){
+    if(typeof Tally!=="undefined"){Tally.loadEmbeds();}
+    else{d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e){e.src=e.dataset.tallySrc;});}
+  }
+  if(typeof Tally!=="undefined"){v();}
+  else if(d.querySelector('script[src="'+w+'"]')==null){
+    var s=d.createElement("script");s.src=w;s.onload=v;s.onerror=v;d.body.appendChild(s);
+  }
+})();
+</script>
+</body>
+</html>
