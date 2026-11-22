@@ -11,11 +11,7 @@ layout: default
   </div>
   <div class="conteneur etroit contenu-article">
     {{ content }}
-    <aside class="encart-cta" aria-labelledby="cta-titre">
-      <h2 id="cta-titre">Votre site est-il concerné ?</h2>
-      <p>Recevez gratuitement un diagnostic de votre page d'accueil : les problèmes d'accessibilité les plus visibles, expliqués simplement, sous 48 h ouvrées.</p>
-      <a class="bouton" href="/#diagnostic">Demander mon diagnostic gratuit</a>
-    </aside>
+    {% include test-gratuit.html %}
     <p class="avertissement">Cet article est fourni à titre d'information générale et ne constitue pas un conseil juridique. Les textes applicables peuvent évoluer : vérifiez la réglementation en vigueur pour votre situation.</p>
     {% assign autres = site.posts | where_exp: "p", "p.url != page.url" %}
     {% if autres.size > 0 %}
