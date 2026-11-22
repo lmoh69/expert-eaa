@@ -95,6 +95,10 @@ th{background:var(--bleu-clair);color:var(--bleu-fonce)}
 .encart-cta{background:var(--bleu-fonce);color:#fff;border-radius:1rem;padding:2rem;margin:3rem 0 1.5rem}
 .encart-cta h2{color:#fff;margin-top:0;font-size:1.4rem}
 .encart-cta p{color:#dbe5f7}
+.encart-cta ul{color:#dbe5f7;margin:0 0 1.25rem;padding-left:1.25rem}
+.encart-cta li{margin-bottom:.45rem}
+.encart-cta strong{color:#fff}
+.encart-cta .bouton{margin-top:.25rem}
 .avertissement{font-size:.9rem;color:var(--gris)}
 .a-lire{border-top:1px solid var(--bord);margin-top:2rem;padding-top:1.5rem}
 .a-lire h2{font-size:1.25rem;margin-top:0}
